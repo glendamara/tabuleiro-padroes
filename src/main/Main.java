@@ -1,3 +1,4 @@
+
 package main;
 
 import jogo.Jogo;
@@ -16,6 +17,16 @@ public class Main {
 
         jogo.configTabuleiro(numCasas);
         jogo.config(numJogadores);
-        jogo.start();
+
+        System.out.print("Deseja jogar no modo Debug? (s/n): ");
+        char modoDebug = scanner.next().charAt(0); // Corrigido para usar next() e pegar o primeiro caractere
+
+        if (modoDebug == 's' || modoDebug == 'S') {
+            jogo.startDebug(); // Inicia o jogo no modo Debug
+        } else {
+            jogo.start(); // Inicia o jogo normalmente
+        }
+
+        scanner.close(); // Fechar o scanner
     }
 }

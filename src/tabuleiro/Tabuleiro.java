@@ -1,3 +1,4 @@
+// /tabuleiro/Tabuleiro.java
 package tabuleiro;
 
 import java.util.ArrayList;
@@ -35,5 +36,17 @@ public class Tabuleiro {
 
     public ArrayList<Casa> getCasas() {
         return casas;
+    }
+
+    public Jogador getJogadorMaisAtrasado() {
+        Jogador jogadorMaisAtrasado = jogadores.get(0); // Começa assumindo que o primeiro jogador é o mais atrasado
+
+        for (Jogador jogador : jogadores) {
+            if (jogador.getPosicao() < jogadorMaisAtrasado.getPosicao()) {
+                jogadorMaisAtrasado = jogador; // Atualiza se encontrar um jogador mais atrasado
+            }
+        }
+
+        return jogadorMaisAtrasado; // Retorna o jogador mais atrasado
     }
 }

@@ -11,6 +11,6 @@ public class CasaJogaDeNovo extends Casa {
     public void aplicarRegra(Jogador jogador) {
         int novaJogada = jogador.rolarDados();
         jogador.adicionarMoedas(novaJogada);
-        jogador.mover(novaJogada);
+        System.out.println(jogador.getCor() + " jogou novamente e ganhou " + novaJogada + " moedas!");
     }
 }

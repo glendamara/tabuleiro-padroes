@@ -11,8 +11,8 @@ public class CasaSorte extends Casa {
     @Override
     public void aplicarRegra(Jogador jogador) {
         if (!(jogador instanceof JogadorAzarado)) {
-            jogador.avancar(3);
             jogador.adicionarMoedas(3);
+            System.out.println(jogador.getCor() + " ganhou 3 moedas!");
         }
     }
 }

@@ -11,7 +11,8 @@ public class CasaAzar extends Casa {
     @Override
     public void aplicarRegra(Jogador jogador) {
         if (!(jogador instanceof JogadorSortudo)) {
-            jogador.removerMoedas(3);
+            jogador.adicionarMoedas(-3);
+            System.out.println(jogador.getCor() + " perdeu 3 moedas!");
         }
     }
 }
