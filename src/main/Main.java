@@ -1,10 +1,6 @@
 package main;
+
 import jogo.Jogo;
-import tabuleiro.Tabuleiro;
-import jogador.Jogador;
-import jogador.JogadorFactory;
-import casa.Casa;
-import casa.CasaFactory;
 import java.util.Scanner;
 
 public class Main {
@@ -20,7 +16,6 @@ public class Main {
 
         jogo.configTabuleiro(numCasas);
         jogo.config(numJogadores);
-        jogo.printTabuleiro();
         jogo.start();
     }
 }

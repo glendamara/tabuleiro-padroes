@@ -1,11 +1,9 @@
 package jogo;
 
-import java.util.List;
-import java.util.Scanner;
-import tabuleiro.*;
-import jogador.*;
+import tabuleiro.Tabuleiro;
+import jogador.Jogador;
 import casa.Casa;
-import casa.CasaFactory;
+import java.util.Scanner;
 
 public class Jogo {
     private Tabuleiro tabuleiro;
@@ -36,38 +34,18 @@ public class Jogo {
 
     public void start() {
         System.out.println("Jogo iniciado!");
-        List<Jogador> jogadores = tabuleiro.getJogadores();
-        
         while (jogoAtivo) {
-            for (Jogador jogador : jogadores) {
+            for (Jogador jogador : tabuleiro.getJogadores()) {
                 if (!jogoAtivo) break;
-                
+
                 System.out.println("\nVez do jogador: " + jogador.getCor());
-                System.out.println("Pressione ENTER para rolar o dado...");
-                scanner.nextLine();
-                
-                int dado = jogador.rolarDado();
+                int dado = jogador.rolarDados();
                 System.out.println("Jogador " + jogador.getCor() + " tirou " + dado);
-                
-                tabuleiro.moverJogador(jogador, dado);
-                
-                Casa casaAtual = tabuleiro.getCasa(jogador.getPosicao());
-                casaAtual.acao(jogador);
-                
-                if (jogador.getPosicao() >= tabuleiro.getNumeroCasas() - 1) {
-                    System.out.println("\nParabéns! O jogador " + jogador.getCor() + " venceu!");
-                    jogoAtivo = false;
-                    break;
-                }
+
+                // Lógica de movimento e aplicação de regras
+                // Exibir estado do tabuleiro
             }
         }
         System.out.println("Jogo encerrado.");
-    }
-
-    public void printTabuleiro() {
-        System.out.println("\nEstado atual do tabuleiro:");
-        for (Jogador jogador : tabuleiro.getJogadores()) {
-            System.out.println("Jogador " + jogador.getCor() + " está na posição " + jogador.getPosicao());
-        }
     }
 }
