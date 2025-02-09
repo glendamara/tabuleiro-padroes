@@ -1,4 +1,5 @@
-package tabuleiro;
+package casa;
+import casa.Casa;
 
 public class CasaFactory {
     public static Casa criarCasa(String tipo, int numero) {

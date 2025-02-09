@@ -1,12 +1,16 @@
 package main;
 import jogo.Jogo;
+import tabuleiro.Tabuleiro;
+import jogador.Jogador;
+import jogador.JogadorFactory;
+import casa.Casa;
+import casa.CasaFactory;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Jogo jogo = new Jogo();
-        jogo.iniciar();
 
         System.out.print("Digite o número de casas: ");
         int numCasas = scanner.nextInt();

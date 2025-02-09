@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Scanner;
 import tabuleiro.*;
 import jogador.*;
+import casa.Casa;
+import casa.CasaFactory;
 
 public class Jogo {
     private Tabuleiro tabuleiro;

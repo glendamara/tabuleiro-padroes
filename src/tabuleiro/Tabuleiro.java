@@ -2,6 +2,7 @@ package tabuleiro;
 
 import java.util.ArrayList;
 import jogador.Jogador;
+import casa.Casa;
 
 public class Tabuleiro {
     private static Tabuleiro instancia;

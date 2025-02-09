@@ -1,4 +1,4 @@
-package tabuleiro;
+package casa;
 
 import jogador.Jogador;
 
