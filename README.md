@@ -1,11 +1,18 @@
-# tabuleiro-padroes
+## Getting Started
 
-* Singleton para o tabuleiro – Apenas um tabuleiro deve existir. Isso pode ser feito garantindo que a classe Tabuleiro tenha um construtor privado e um método estático para retornar a única instância.
+Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-* Factory para criação de jogadores e casas – A classe Jogo pode ter fábricas que criam instâncias de Jogador (Normal, Sortudo, Azarado) e das casas (CasaSimples, CasaSorte, CasaPrisao, etc.).
+## Folder Structure
 
-* Strategy para as casas – Cada tipo de casa deve ter sua própria implementação do método aplicarRegra(), seguindo o princípio da herança e do polimorfismo.
+The workspace contains two folders by default, where:
 
-* Injeção de dependência para casas – As casas recebem o jogador para aplicar os efeitos corretamente (exemplo: verificar se ele tem bônus).
+- `src`: the folder to maintain sources
+- `lib`: the folder to maintain dependencies
 
-* Facade para a classe Jogo – A classe Jogo gerencia a criação e execução do jogo, facilitando o uso na Main.
+Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+
+> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+
+## Dependency Management
+
+The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
